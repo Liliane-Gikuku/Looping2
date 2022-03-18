@@ -3,8 +3,8 @@ fun main(){
     println(answer)
     var output =mixed(arrayOf(2, 5.0, 7.23,"Angel", 1.00))
     println(output)
-    var length= ArrayCharacters(arrayOf('a','f','g'))
-    println(length)
+    var counting= ArrayCharacters(arrayOf('a','f','g','i'))
+    println(counting)
 
 }
 
@@ -29,6 +29,13 @@ fun mixed(elements:Array<Any>):Double{
 return sum
 }
 fun ArrayCharacters(contains:Array<Char>):Int{
-    var length=contains.size
-    return length
+    var vowels=0
+    contains.forEach {char ->
+        if (char == 'a' || char == 'e'|| char=='i'||char=='o'|| char=='u') {
+            vowels++
+
+        }
+    }
+
+    return vowels
 }

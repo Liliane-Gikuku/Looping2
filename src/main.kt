@@ -1,7 +1,7 @@
 fun main(){
     var answer= ArrayProduct(arrayOf(1,2,3,4,5))
     println(answer)
-    var output =mixed(arrayOf(2, 5.0, 7.23,"Angel", 1.00))
+    var output =mixed(arrayOf(2, 5.0F, 7.23, 1.00))
     println(output)
     var counting= ArrayCharacters(arrayOf('a','f','g','i'))
     println(counting)
@@ -21,8 +21,8 @@ return product
 fun mixed(elements:Array<Any>):Double{
     var sum=0.00
     elements.forEach {element ->
-        if (element is Double){
-            sum+=element
+        if (element is Double || element is Float){
+            sum+=element.toString().toDouble()
         }
 
     }
